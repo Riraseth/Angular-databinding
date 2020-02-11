@@ -1,9 +1,14 @@
 <div class="panel panel-default">
-  <div class="panel-heading">{{ element.name }}</div>
+<!--  <div class="panel-heading">{{ element.name }}</div>-->
+  <div class="panel-heading" #heading>{{ name }}</div>
   <div class="panel-body">
-    <p>
-      <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
-      <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-    </p>
+<!--    <p>-->
+<!--      <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>-->
+<!--      <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>-->
+<!--    </p>-->
+<!--    paragraph moved to app component-->
+
+    <ng-content></ng-content>
+<!--    ng-content allows access to content from it's component-->
   </div>
 </div>
